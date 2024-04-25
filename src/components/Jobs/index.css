@@ -26,6 +26,7 @@
 .profile-items-container {
   width: 30%;
   padding: 10px;
+  padding-left: 20px;
   display: inline-block;
   margin-top: 89px;
   background-color: #000000;

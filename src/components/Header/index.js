@@ -34,7 +34,6 @@ const Header = props => {
         <Link className="HJ" to="/">
           <li className="HomeAndJobsStyle">Home</li>
         </Link>
-        &nbsp;&nbsp;&nbsp;
         <Link className="HJ" to="/jobs">
           <li className="HomeAndJobsStyle">Jobs</li>
         </Link>
@@ -46,10 +45,8 @@ const Header = props => {
             <TiHome />
           </li>
         </Link>
-        &nbsp;&nbsp;&nbsp;
         <Link className="HJ" to="/jobs">
           <li className="HomeAndJobsStyleSmallScreens">
-            {' '}
             <BsBriefcaseFill />
           </li>
         </Link>
@@ -62,7 +59,6 @@ const Header = props => {
           type="button"
         >
           Logout
-          {/* */}
         </button>
       </div>
 

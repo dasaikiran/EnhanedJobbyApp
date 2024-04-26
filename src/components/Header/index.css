@@ -1,6 +1,12 @@
-ul{
+ul {
   list-style-type: none;
   padding-left: 0px;
+}
+.home-icon{
+  font-size: 25px;
+}
+.jobs-icon{
+  font-size: 25px;
 }
 .LogoutButton {
   background-color: #6366f1;

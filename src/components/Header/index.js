@@ -42,12 +42,12 @@ const Header = props => {
       <ul className="HomeAndJobsSmallScreens">
         <Link className="HJ" to="/">
           <li className="HomeAndJobsStyleSmallScreens">
-            <TiHome />
+            <TiHome className="home-icon" />
           </li>
         </Link>
         <Link className="HJ" to="/jobs">
           <li className="HomeAndJobsStyleSmallScreens">
-            <BsBriefcaseFill />
+            <BsBriefcaseFill className="jobs-icon" />
           </li>
         </Link>
       </ul>

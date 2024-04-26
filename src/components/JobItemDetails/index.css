@@ -1,0 +1,124 @@
+.body-container {
+  display: flex;
+  flex-direction: column;
+  background-color: black;
+  min-height: 100vh;
+  margin-top: 89px;
+  color: #f1f5f9;
+  padding: 20px;
+}
+.job-logo {
+  width: 80px;
+  height: 80px;
+}
+.job-title {
+  font-size: 19px;
+}
+p {
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+.package {
+  font-size: 20px;
+  font-weight: bold;
+}
+.desc-visit {
+  display: flex;
+  justify-content: space-between;
+}
+.visit-icon-container {
+  display: flex;
+  align-items: center;
+}
+.visit-anchor {
+  display: flex;
+  align-items: center;
+}
+.visit-icon-name {
+  font-size: 20px;
+  margin-right: 10px;
+  font-weight: bold;
+}
+.skills-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+.skill-item {
+  display: flex;
+  align-items: center;
+  margin-right: 10px;
+  width: 150px;
+  margin-bottom: 20px;
+}
+.skill-image {
+  width: 50px;
+  height: 50px;
+  margin-right: 10px;
+}
+.life-at-company-container {
+  display: flex;
+  flex-direction: column;
+}
+.life-at-company-desc {
+  margin-bottom: 20px;
+}
+.similar-jobs-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+@media screen and (min-width: 768px) {
+  .life-at-company-container {
+    display: flex;
+    flex-direction: row;
+  }
+  .skill-image {
+    width: 70px;
+    height: 70px;
+  }
+  .skill-item {
+    width: 300px;
+    margin-right: 20px;
+  }
+  .body-container {
+    padding: 40px;
+  }
+  .job-logo {
+    width: 150px;
+    height: 150px;
+  }
+  .job-title {
+    font-size: 40px;
+  }
+  p {
+    margin-top: 0px;
+    margin-bottom: 0px;
+  }
+}
+.job-details-item-container {
+  padding: 15px;
+  background-color: #202020;
+  border-radius: 15px;
+}
+
+.job-details-container {
+  border-bottom: 2px solid white;
+}
+.job-logo-container {
+  display: flex;
+  margin-left: 0px;
+}
+.job-rating-container {
+  display: flex;
+  align-items: center;
+}
+.job-name-rating {
+  margin-left: 10px;
+}
+.star-icon {
+  margin-right: 10px;
+}
+.location-package {
+  padding-left: 0px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}

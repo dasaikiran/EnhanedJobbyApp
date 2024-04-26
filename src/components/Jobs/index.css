@@ -1,47 +1,33 @@
 .hello-container {
   display: flex;
+  flex-direction: column;
 }
 
 .jobs-container {
-  height: 91vh;
   background-color: #000000;
   color: white;
   padding: 30px;
-  margin-top: 89px;
-  width: 70%;
+  width: 100%;
   display: flex;
   flex-direction: column;
-  overflow-y: auto;
 }
-
-.jobs-container::-webkit-scrollbar {
-  width: 5px; /* Set scrollbar width */
-}
-
-.jobs-container::-webkit-scrollbar-thumb {
-  background-color: #373636; /* Set thumb color */
-  border-radius: 6px; /* Set thumb border radius */
-}
-
-.profile-items-container {
-  width: 30%;
+.profile-items-container{
+  width: 100%;
   padding: 10px;
   padding-left: 20px;
-  display: inline-block;
   margin-top: 89px;
+  padding-top: 60px;
   background-color: #000000;
   color: white;
-  height: 91vh;
-  overflow-y: auto;
 }
 
-.profile-items-container::-webkit-scrollbar {
-  width: 5px; /* Set scrollbar width */
-}
-
-.profile-items-container::-webkit-scrollbar-thumb {
-  background-color: #373636; /* Set thumb color */
-  border-radius: 6px; /* Set thumb border radius */
+.jobsList-container {
+  display: flex;
+  flex-direction: column;
+  list-style-type: none;
+  padding-left: 0px;
+  padding-top: 0px;
+  width: 100%;
 }
 
 .jobs-search-container {
@@ -58,15 +44,6 @@
   align-items: center;
 }
 
-.jobsList-container {
-  display: flex;
-  flex-direction: column;
-  list-style-type: none;
-  padding-left: 0px;
-  padding-top: 30px;
-  width: 100%;
-}
-
 .search-input-container {
   align-self: flex-start;
   border-width: 1px;
@@ -76,6 +53,8 @@
   padding-left: 10px;
   display: flex;
   position: fixed;
+  top: 100px;
+  left: 10px;
   background-color: #000000;
 }
 
@@ -178,3 +157,46 @@
   font-weight: bold;
   font-size: 15px;
 }
+
+@media screen and (min-width:768px){
+  .hello-container{
+    flex-direction: row;
+  }
+  .jobsList-container{
+    padding-top: 40px;
+  }
+  .jobs-container{
+    height: 91vh;
+    overflow-y: auto;
+    margin-top: 89px;
+  }
+  .jobs-container::-webkit-scrollbar {
+  width: 5px; /* Set scrollbar width */
+}
+
+.jobs-container::-webkit-scrollbar-thumb {
+  background-color: #373636; /* Set thumb color */
+  border-radius: 6px; /* Set thumb border radius */
+}
+.profile-items-container {
+    width: 30%;
+    height: 91vh;
+    overflow-y: auto;
+    padding-top: 10px;
+}
+
+.profile-items-container::-webkit-scrollbar {
+  width: 5px; /* Set scrollbar width */
+}
+
+.profile-items-container::-webkit-scrollbar-thumb {
+  background-color: #373636; /* Set thumb color */
+  border-radius: 6px; /* Set thumb border radius */
+}
+.search-input-container{
+  top: auto;
+  left: auto;
+}
+}
+
+

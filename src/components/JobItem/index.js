@@ -18,7 +18,7 @@ const JobItem = props => {
   } = item
   return (
     <li className="list-item">
-      <Link to={`/jobs/${id}`}>
+      <Link className="list-item-link" to={`/jobs/${id}`}>
         <div className="li-item-details-container">
           <div className="logo-container">
             <img className="li-logo" src={companyLogoUrl} alt="company logo" />

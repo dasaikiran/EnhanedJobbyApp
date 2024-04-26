@@ -17,8 +17,8 @@ const SimilarJobItem = props => {
     title,
   } = item
   return (
-    <Link to={`/jobs/${id}`}>
-      <li className="list-item">
+    <Link className="list-item-link" to={`/jobs/${id}`}>
+      <li className="list-item1">
         <div className="li-item-details-container">
           <div className="logo-container">
             <img

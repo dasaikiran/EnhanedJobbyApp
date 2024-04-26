@@ -1,11 +1,15 @@
 .list-item {
   display: flex;
   flex-direction: column;
-  width: 90%;
+  width: 100%;
   padding: 15px;
   background-color: #202020;
   margin-bottom: 20px;
   border-radius: 20px;
+}
+.list-item-link {
+  text-decoration: none;
+  color: #f1f5f9;
 }
 .li-item-details-container {
   border-width: 0px;

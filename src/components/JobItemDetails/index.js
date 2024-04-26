@@ -120,75 +120,78 @@ class JobItemDetails extends Component {
 
     return (
       <>
-        <div className="job-details-item-container">
-          <div className="job-details-container">
-            <div className="job-logo-container">
-              <img
-                className="job-logo"
-                src={companyLogoUrl}
-                alt="job details company logo"
-              />
-              <div className="job-name-rating">
-                <h1 className="job-title">{title}</h1>
-                <div className="job-rating-container">
-                  <FaStar className="icon star-icon" />
-                  <p>{rating}</p>
+        <div className="body-container">
+          <div className="job-details-item-container">
+            <div className="job-details-container">
+              <div className="job-logo-container">
+                <img
+                  className="job-logo"
+                  src={companyLogoUrl}
+                  alt="job details company logo"
+                />
+                <div className="job-name-rating">
+                  <h1 className="job-title">{title}</h1>
+                  <div className="job-rating-container">
+                    <FaStar className="icon star-icon" />
+                    <p>{rating}</p>
+                  </div>
                 </div>
               </div>
+              <div className="location-package">
+                <div className="locint-container">
+                  <MdLocationOn className="icon location-icon" />
+                  <p className="location-name">{location}</p>
+                </div>
+                <div className="locint-container">
+                  <MdWork className="icon work-icon" />
+                  <p className="internship-name">{employmentType}</p>
+                </div>
+                <p className="package">{packagePerAnnum}</p>
+              </div>
             </div>
-            <div className="location-package">
-              <div className="locint-container">
-                <MdLocationOn className="icon location-icon" />
-                <p className="location-name">{location}</p>
+            <div className="job-description-container">
+              <div className="desc-visit">
+                <h1 className="job-description-heading">Description</h1>
+                <div className="visit-icon-container">
+                  <a
+                    className="visit-anchor"
+                    href={companyWebsiteUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <p className="visit-icon-name">Visit</p>
+                    <FaExternalLinkAlt />
+                  </a>
+                </div>
               </div>
-              <div className="locint-container">
-                <MdWork className="icon work-icon" />
-                <p className="internship-name">{employmentType}</p>
+              <p className="job-descritption-para">{jobDescription}</p>
+              <h1 className="skills-heading">Skills</h1>
+              <ul className="skills-container">
+                {skillsList.map(item => (
+                  <li key={item.name} className="skill-item">
+                    <img
+                      className="skill-image"
+                      src={item.imageUrl}
+                      alt={item.name}
+                    />
+                    <p className="skill-name">{item.name}</p>
+                  </li>
+                ))}
+              </ul>
+              <h1 className="life-at-company-heading">Life at Company</h1>
+              <div className="life-at-company-container">
+                <p className="life-at-company-desc">{description}</p>
+                <img
+                  className="life-at-image"
+                  src={lifeImageUrl}
+                  alt="life at company"
+                />
               </div>
-              <p className="package">{packagePerAnnum}</p>
             </div>
           </div>
-          <div className="job-description-container">
-            <div className="desc-visit">
-              <h1 className="job-description-heading">Description</h1>
-              <div className="visit-icon-container">
-                <a
-                  href={companyWebsiteUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <p className="visit-icon-name">Visit</p>
-                  <FaExternalLinkAlt />
-                </a>
-              </div>
-            </div>
-            <p className="job-descritption-para">{jobDescription}</p>
-            <h1 className="skills-heading">Skills</h1>
-            <ul className="skills-container">
-              {skillsList.map(item => (
-                <li key={item.name} className="skill-item">
-                  <img
-                    className="skill-image"
-                    src={item.imageUrl}
-                    alt={item.name}
-                  />
-                  <p className="skill-name">{item.name}</p>
-                </li>
-              ))}
-            </ul>
-            <h1 className="life-at-company-heading">Life at Company</h1>
-            <div className="life-at-company-container">
-              <p className="life-at-company-desc">{description}</p>
-              <img
-                className="life-at-image"
-                src={lifeImageUrl}
-                alt="life at company"
-              />
-            </div>
-          </div>
+          <h1 className="similar-jobs-heading">Similar Jobs</h1>
+          <ul className="similar-jobs-container">{this.getSimilarJobs()}</ul>
         </div>
-        <h1 className="similar-jobs-heading">Similar Jobs</h1>
-        <ul className="similar-jobs-container">{this.getSimilarJobs()}</ul>
       </>
     )
   }
